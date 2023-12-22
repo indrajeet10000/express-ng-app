@@ -1,0 +1,14 @@
+<div style="text-align:center">
+	<h1>
+		Item list
+	</h1>
+	<ul>
+		<li *ngFor="let item of itemList">{{ item.name }}</li>
+		
+	</ul>
+	<form (submit)="addItem()">
+		<label for="newItemName">Item Name:</label>
+		<input type="text" id="newItemName" [(ngModel)]="newItemName" required>
+		<button type="submit">Add Item</button>
+	</form>
+</div>
